@@ -1,0 +1,30 @@
+.root {
+    height: 31px;
+    padding: 10px 15px 10px 15px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 10px;
+    letter-spacing: 0em;
+    text-align: center;
+   // color: #FFFFFF;
+    transition: transform 0.1s ease-out;
+  //  background-color: #00A5FF;
+}
+  
+.white {
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
+.blue {
+  background-color: #00A5FF;
+  color: #FFFFFF;
+}
+
+.root:active {
+  transform: scale(0.97);
+// transform: translateY(2px); 
+// background-color: #2db2fa;  
+
+}
