@@ -1,15 +1,16 @@
 import React, { useState } from 'react'
-import { Button } from '../components/Button'
-import { questions } from '../questions/questions'
+import Button from '../components/button/Button';
 
+import { questions } from '../questions/questions'
+import { BrowserRouter as Router, Route, Redirect, Navigate, useNavigate } from 'react-router-dom';
 
 export const Qwis = () => {
     
 const [ index , setIndex ] = useState(0)
 const [ result , setResult ] = useState([])
 
+const navigate = useNavigate();
 
-console.log(result)
 
 
 // Добавление ответа в массив 
@@ -18,7 +19,14 @@ function chengeValue (event) {
   console.log(event.target.value)
   console.log(questions[index].question)
 
+
+ 
+
+
+
   if(result.some((obj) => obj.question === questions[index].question )) {
+
+ 
 
     let newRes = result.map((el) => {
 
@@ -47,29 +55,36 @@ function chengeValue (event) {
 //console.log(index, 'В элементе')
 
 function next () {
-  // Также проверим длину лезуртируещго массива 
-  // к этому условию добавим наличие ответа на этом этапе
-  if ((index+ 1) === questions.length) {
-    return  //Cдесь мы должны сделать преход на другую страницу с товарами 
+
+
+  if(questions.length === result.length && result.length ===  index + 1 ) {
+
+    console.log('Chf,jnrf')
+
+    setIndex(0)
+    setResult([])
+    navigate('/products');
+
+    return
   }
 
-if (result.some((obj) => obj.question === questions[index].question ) ) {
+  
+
+if (result.some((obj) => obj.question === questions[index].question  ) ) {
     setIndex((index + 1))
   }
 else  {
-  alert('Введите пожалуйста ответ');
+  alert('Пожалуйста, выберите ответ');
 }
 }
 
 
 
 function back () {
-  if ( index === 0 ) {
-    return 
-  }
-  else {
+
+  
   setIndex(index - 1)
-  }
+  
 }
 
 
@@ -121,7 +136,7 @@ function chekAnser (value) {
                         })}
                 </ul>  
 
-    </div>
+                </div>
 
 
 

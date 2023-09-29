@@ -1,41 +1,26 @@
 @import "./libs/normalize";
-//@import "./libs/normalize";
-//@import "./components/all";
+
 
 
 .wrapper {
     font-family: 'Inter', sans-serif;    
-    padding: 60px  50px;
+    padding: 60px 50px;
 }
 
 
-.content {
-    //background-color: aqua;
-   // display: flex;
-   /// flex-direction: column;
-
-    //justify-content: space-between;
-    height: 580px;
-
-
-}  
-
-
 .header {
-        //background-color: #9A9A9A;
         margin-bottom: 29px;
         height: 115px;
 
         
     h1 {
-      //  background-color: aqua;
         font-size: 40px;
         font-weight: 700;
         line-height: 48px;
         letter-spacing: 0em;
         text-align: left;
         color:#000000;
-        padding: 0; /* Убираем внутренние отступы (padding) */
+        padding: 0; 
         margin-bottom: 21px ;
         
     }
@@ -48,18 +33,14 @@
         text-align: left;
         color:#000000;
         width: 583px;
-        //background-color: aqua;
     }
-
-
-
 }
 
 
 
 .qwis {
     width: 868px;
-    height: 425px;                    // height: 432px;
+    height: 425px;                   
     padding: 34px 35px;
 
     border-radius: 10px;
@@ -68,8 +49,6 @@
 
     &__indicator {
         height: 20px;
-       // width: 80px;
-        //  background-color: #bfdbea;
         display: flex ;
         margin-bottom: 12px;
 
@@ -94,40 +73,27 @@
         font-weight: 400;
         line-height: 18px;
         letter-spacing: 0em;
-       // text-align: left;
         color: #9A9A9A;
-        margin-bottom: 29px;  ////// ?
+        margin-bottom: 29px; 
     }
 
-    &__question {
-        
+    &__question { 
         font-size: 20px;
         font-weight: 700;
         line-height: 24.2px;
         letter-spacing: 0em;
         text-align: left;
-
-        margin-bottom: 23px;  ////// ?
-
+        margin-bottom: 23px;  
     }
 
-
-
-
-
     &__listOfquestions {
-  
         height: 135.55px; //Высота конейтенера для вопросов
-
-        //background-color: #9A9A9A;
         font-size: 15px;
         font-weight: 400;
         line-height: 18.15px;
         letter-spacing: 0em;
-       // background-color: rgb(186, 186, 187);
-
         height: 135px;
-        margin-bottom: 32px;   // ???
+        margin-bottom: 32px;   
 
         ul {
             display: flex;
@@ -135,10 +101,7 @@
             justify-content: space-between;
             list-style: none; 
             padding: 0;
-            
-            //background-color: #124561;
-            //margin-bottom: 65px;
-       
+
         };
         
         label {
@@ -149,7 +112,7 @@
         li { 
             margin-bottom: 11.2px;
             &:last-child {
-                margin-bottom: 0; /* Отменяем отступ снизу у последнего элемента */
+                margin-bottom: 0; 
               }
         }
 
@@ -160,18 +123,98 @@
         }
     }
 
-
     &__container-button {
         display: flex;
     }
-
 
     &__container-button > :not(:last-child) {
         margin-right: 10px;
     }
 
+}
 
 
+
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 35px; 
+  width: 100%; 
+
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @media (max-width: 900px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (max-width: 600px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 400px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+
+
+.grid-item {
+  width: 240px;
+  height: 342px;
+  background-color: #f1d6d6;
+}
+
+.centr {
+  display: flex;
+  justify-content: center ;
+}
+
+.item_image {
+  width: 240px;
+  height: 240px;
+  border-radius: 20px;   //6.75px;
+  border: 1px;
+  border-color: #1e0202;
+  margin-bottom: 15px;
+}
+
+
+.fit-image {
+  border: 1px solid #E9E9E9;
+  border-radius: 6.75px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  object-position: center center; 
+  }
+
+
+.item_title {
+  word-break:break-all;
+  padding-left: 1px;
+  height: 46px;
+  font-family: Inter;
+  font-size: 17.9px;
+  font-weight: 500;
+  line-height: 23px;
+  letter-spacing: 0em;
+  text-align: left;
+  overflow-wrap: break-word;
+}
+
+.item_price {
+  font-family: Inter;
+  font-size: 27px;
+  font-weight: 600;
+  line-height: 37px;
+  letter-spacing: 0em;
+  text-align: left;
 }
 
 
