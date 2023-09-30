@@ -1,6 +1,10 @@
 import React from 'react'
 import jsonData from '../serveraAnswer/products.json';
 import ProductItem from '../components/poductItem/ProductItem';
+import MyPagination from '../components/Pagination/Pagination';
+
+import ReactPaginate from 'react-paginate';
+
 
 
 //Бальзам от пигм.пятен для чув. кожи ISISPHARMA NEOTONE Sensitive 30мл
@@ -8,22 +12,10 @@ import ProductItem from '../components/poductItem/ProductItem';
 
 export const Products = () => {
 
-let string = "Бальзам от пигм.пятен для чув. кожи ISISPHARMA NEOTONE Sensitive 30мл"
-let stringSlice = "Бальзам от пигм.пятен для чув. кожи ISISPHARMF…"  // Длина 46 символов
-//console.log('Бальзам от пигм.пятен для чув. кожи ISISPHARMA'.split("").length) 
-//console.log(stringSlice.length)
 
 
+return ( <>
 
-//Функция аснхронного запроса
-
-
-
-
-let test ="Пилинг энзиматический Dermedic HYDRAIN3 HIAL"
-
-
-return (
 
     <div className="grid-container">
 
@@ -33,68 +25,29 @@ return (
 
     </div>
 
+   
+    <MyPagination />
 
+  
+    </>
 )}
 
 
 
 
-/* 
-<div key={index} className='centr'> 
-
-              <div  className="grid-item">
-
-                <div  className="item_image  ">
-        <img src={item.image} alt=""  className="fit-image"/>
-                </div>
-
-                <div className="item_title">
-      <p>{item.title.length > 45 ? ellipses(item.title) : item.title}</p>
-                </div>
-
-                <div className='item_price'>
-      <p>
-      {item.price}
-      </p>
-
-                </div>
-
-              </div>
-
-
-          </div>
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-//        <ProductItem  image={item.image} title={item.title}  price={item.price}  />
-
-
 /*
-<div key={index} className='centr'> 
-
-      <div  className="grid-item">
-        <div  className="image_item">
-              <img src="../images/product-1.jpeg" alt=""  className="fit-image"/>
-        </div>
-
-
-
-
-      </div>
-
-      </div>
-
-          <img src="../images/product-1.jpeg"  className="fit-image" alt="Product 1" />
-
+  <ContentLoader 
+    speed={2}
+    width={240}
+    height={342}
+    viewBox="0 0 240 342"
+    backgroundColor="#e5e0e0"
+    foregroundColor="#ecebeb"
+    {...props}
+  >
+    <rect x="-1" y="2" rx="7" ry="7" width="240" height="240" /> 
+    <rect x="1" y="257" rx="0" ry="0" width="240" height="42" /> 
+    <rect x="1" y="306" rx="0" ry="0" width="180" height="34" />
+  </ContentLoader>
 
 */

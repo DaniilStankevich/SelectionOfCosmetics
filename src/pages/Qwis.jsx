@@ -12,7 +12,6 @@ const [ result , setResult ] = useState([])
 const navigate = useNavigate();
 
 
-
 // Добавление ответа в массив 
 function chengeValue (event) {
 
@@ -52,39 +51,28 @@ function chengeValue (event) {
 }
 
 
-//console.log(index, 'В элементе')
 
 function next () {
 
-
   if(questions.length === result.length && result.length ===  index + 1 ) {
-
-    console.log('Chf,jnrf')
-
-    setIndex(0)
-    setResult([])
-    navigate('/products');
-
+      setIndex(0)
+      setResult([])
+      navigate('/products');
     return
   }
 
-  
-
-if (result.some((obj) => obj.question === questions[index].question  ) ) {
+  if (result.some((obj) => obj.question === questions[index].question  ) ) {
     setIndex((index + 1))
-  }
-else  {
-  alert('Пожалуйста, выберите ответ');
-}
+    }
+  else  {
+    alert('Пожалуйста, выберите ответ');
+    }
 }
 
 
 
 function back () {
-
-  
   setIndex(index - 1)
-  
 }
 
 
@@ -147,8 +135,6 @@ function chekAnser (value) {
   <Button funProps={next}>{index === questions.length-1 ? 'Узнать результат':'Дальше'}</Button> 
 
 </div>
-
-
 
 
 
