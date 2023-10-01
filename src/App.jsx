@@ -1,23 +1,18 @@
-import './scss/app.scss';
-import { Qwis } from './pages/Qwis';
-import { Products } from './pages/Products';
-import { Routes , Route, useSearchParams, useParams, useLocation} from 'react-router-dom';
+import { Routes, Route, useLocation} from 'react-router-dom';
+import Qwis from './pages/Qwis';
+import Products from './pages/Products';
 import Header from './components/header/Header';
+import './scss/app.scss';
 
 
 function App() {
 
-
-
-
 const location = useLocation();
 
-
-// Фун-ция по формированию заголовков на основе параметров в строке запроса
+// Фун-ция по формированию заголовков на основании маршрута в строке запроса
 const headerValues = (params) => {
 
-
-// Можно автоматически добавлять соответсвующе заголовки 
+// Можно автоматически добавлять соответствующие заголовки 
 // на основании той страницы, на которой мы находимся 
   switch (params) {
 
@@ -41,9 +36,8 @@ const titles = headerValues(location.pathname)
 
 
   return (
-
-
     <div className="wrapper">
+      <div className='subWrapper'> 
 
       <div className='header'> 
             <Header mainTitle={titles.mainTitle} subTitle={titles.subTitle}  /> 
@@ -54,7 +48,9 @@ const titles = headerValues(location.pathname)
             <Route  path="/products" element={<Products />}  />
       </Routes>
 
+      </div>
   </div>
+
 )}
 
 export default App;

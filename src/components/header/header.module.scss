@@ -1,31 +1,96 @@
 .root {
-
-    height: 115px;
-    //background-color: aqua;
-
+  height: 115px;
 }
 
-
-
-
 .maintitle {
-    font-size: 40px;
-    font-weight: 700;
-    line-height: 48px;
-    letter-spacing: 0em;
-    text-align: left;
-    color:#000000;
-    padding: 0; 
-    margin-bottom: 21px ;
-    
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #000000;
+  padding: 0;
+  margin-bottom: 21px;
 }
 
 .subtitle {
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: 0em;
-    text-align: left;
-    color:#000000;
-    width: 583px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #000000;
+  width: 583px;
+}
+
+@media only screen and (max-width: 770px) {
+  .maintitle {
+    font-size: 33px; /* Пример нового значения для font-size при сужении экрана на устройствах с шириной 320px */
+    line-height: 23px; /* Пример нового значения для line-height при сужении экрана на устройствах с шириной 320px */
+    margin-bottom: 10px; /* Пример нового значения для margin-bottom при сужении экрана на устройствах с шириной 320px */
+  }
+
+  .subtitle {
+    font-size: 17px; /* Пример нового значения для font-size при сужении экрана на устройствах с шириной 320px */
+    line-height: 13px; /* Пример нового значения для line-height при сужении экрана на устройствах с шириной 320px */
+    width: 100%; /* Пример нового значения для width при сужении экрана на устройствах с шириной 320px */
+  }
+}
+
+@media only screen and (max-width: 603px) {
+  .maintitle {
+    font-size: 28px; 
+    line-height: 23px; 
+    margin-bottom: 10px; 
+  }
+
+  .subtitle {
+    font-size: 17px; 
+    line-height: 13px; 
+    width: 100%; 
+  }
+}
+
+@media only screen and (max-width: 556px) {
+  .maintitle {
+    font-size: 26px; 
+    line-height: 23px; 
+    margin-bottom: 10px; 
+  }
+
+  .subtitle {
+    font-size: 14px; 
+    line-height: 13px; 
+    width: 100%; 
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .maintitle {
+    font-size: 22px; 
+    line-height: 23px;
+    margin-bottom: 10px; 
+  }
+}
+
+@media only screen and (max-width: 401px) {
+  .maintitle {
+    font-size: 19px; 
+    line-height: 23px; 
+    margin-bottom: 3px; 
+  }
+}
+
+@media only screen and (max-width: 346px) {
+  .maintitle {
+    font-size: 17px; 
+    line-height: 23px; 
+    margin-bottom: 3px; 
+  }
+
+  .subtitle {
+    font-size: 10px;
+    line-height: 13px;
+    width: 100%;
+  }
 }

@@ -1,25 +1,31 @@
 .root {
-    height: 31px;
-    padding: 10px 15px 10px 15px;
-    border-radius: 5px;
-    font-size: 15px;
-    font-weight: 600;
-    line-height: 10px;
-    letter-spacing: 0em;
-    text-align: center;
-    transition: transform 0.1s ease-out;
+  height: 31px;
+  padding: 10px 15px 10px 15px;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 10px;
+  letter-spacing: 0em;
+  text-align: center;
+  transition: transform 0.1s ease-out;
 }
-  
+
 .white {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   color: #000000;
 }
 
 .blue {
-  background-color: #00A5FF;
-  color: #FFFFFF;
+  background-color: #00a5ff;
+  color: #ffffff;
 }
 
 .root:active {
   transform: scale(0.97);
+}
+
+@media only screen and (max-width: 480px) {
+  .root {
+    font-size: 13px;
+  }
 }

@@ -1,84 +1,31 @@
-// Pagination.module.scss
-
-/*
 .pagination {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    justify-content: flex-start; 
-    // background-color: #00A5FF;
+  display: flex;
+  list-style: none;
+  padding: 0;
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  max-width: 190px;
 
-    font-family: Inter;
-font-size: 20px;
-font-weight: 400;
-line-height: 24px;
-letter-spacing: 0em;
-text-align: left;
-
+  color: #b8b8b8;
+  cursor: pointer;
+  span {
+    margin-right: 10px;
+  }
 }
 
 .page {
-    margin: 0 5px;
-    cursor: pointer;
-    font-size: 14px;
-    color: #B8B8B8;
+  width: 25px;
+  text-align: left;
 
-    &:hover {
-      text-decoration: underline;
-    }
+  &:last-child {
+    width: auto;
   }
+}
 
-  .active {
-    color: #00A5FF;
-    font-weight: bold;
-  }
-
-  */
-
-  .pagination {
-    display: flex;
-    list-style: none;
-    padding: 0;
-   // justify-content: flex-start; /* Изменено на center */
-    
-    font-family: Inter;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: 0em;
-    //text-align: left;
-   // background-color: aquamarine;
-    max-width: 190px;
-
-    color: #B8B8B8;
-    cursor: pointer;
-
-  
-    span {
-   
-     // background-color: #554ca5;
-      margin-right: 10px;
-    }
-
-  }
-
-  .page {
-   // margin-right: 10px;
-   width: 25px;
-   //color: #B8B8B8;
-
-    text-align: left;
-   // cursor: pointer;
-  
- 
-    &:last-child {
-      width: auto; /* Отмена ширины у последнего элемента */
-    //  background-color: #554ca5;
-    }
-
-  }
-
-  .active {
-    color: #00A5FF;
-    font-weight: bold;
-  }
+.active {
+  color: #00a5ff;
+  font-weight: bold;
+}
